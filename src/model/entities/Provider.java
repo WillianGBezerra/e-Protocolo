@@ -2,8 +2,8 @@ package model.entities;
 
 import java.io.Serializable;
 
-public class Provider implements Serializable{
-	
+public class Provider implements Serializable {
+
 	/**
 	 * 
 	 */
@@ -11,7 +11,7 @@ public class Provider implements Serializable{
 	private Integer id;
 	private String name;
 	private String cnpj;
-	
+
 	public Provider(Integer id, String name, String cnpj) {
 		super();
 		this.id = id;
@@ -47,9 +47,7 @@ public class Provider implements Serializable{
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((cnpj == null) ? 0 : cnpj.hashCode());
-		result = prime * result + id;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
 
@@ -62,17 +60,10 @@ public class Provider implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Provider other = (Provider) obj;
-		if (cnpj == null) {
-			if (other.cnpj != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!cnpj.equals(other.cnpj))
-			return false;
-		if (id != other.id)
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
+		} else if (!id.equals(other.id))
 			return false;
 		return true;
 	}

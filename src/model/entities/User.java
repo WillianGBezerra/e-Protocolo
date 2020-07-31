@@ -82,12 +82,7 @@ public class User implements Serializable{
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((email == null) ? 0 : email.hashCode());
-		result = prime * result + id;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((passEmail == null) ? 0 : passEmail.hashCode());
-		result = prime * result + ((passWord == null) ? 0 : passWord.hashCode());
-		result = prime * result + ((department == null) ? 0 : department.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
 
@@ -100,32 +95,10 @@ public class User implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		if (email == null) {
-			if (other.email != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!email.equals(other.email))
-			return false;
-		if (id != other.id)
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (passEmail == null) {
-			if (other.passEmail != null)
-				return false;
-		} else if (!passEmail.equals(other.passEmail))
-			return false;
-		if (passWord == null) {
-			if (other.passWord != null)
-				return false;
-		} else if (!passWord.equals(other.passWord))
-			return false;
-		if (department == null) {
-			if (other.department != null)
-				return false;
-		} else if (!department.equals(other.department))
+		} else if (!id.equals(other.id))
 			return false;
 		return true;
 	}
